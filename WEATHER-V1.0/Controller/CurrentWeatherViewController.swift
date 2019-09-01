@@ -14,9 +14,21 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var temperatureLbl: UILabel!
     @IBOutlet weak var fahrenheitLbl: UILabel!
+    
+    let forecastAPIKey = "e940750330c2e23b915410d54ffbcc6c"
+    var location:(city:String,country:String) = ("Dhaka","BD")
+    var forecastService:ForecastService!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        forecastService = ForecastService(APIKey: forecastAPIKey)
+        forecastService.getCurrentWeather(city: location.city, country: location.country) { (currentWeather,city) in
+            DispatchQueue.main.async {
+                let temp:Int = (Int(Double(currentWeather.temp!)! - 273.15))
+                self.temperatureLbl.text = "\(temp)°" 
+                self.cityLbl.text = city.name ?? ""
+                self.fahrenheitLbl.text = "CELSIUS"
+            }
+        }
     }
 
 
