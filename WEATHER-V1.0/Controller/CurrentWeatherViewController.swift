@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrentWeatherViewController: UIViewController {
 
+    @IBOutlet weak var bgImg: UIImageView!
+    @IBOutlet weak var cityLbl: UILabel!
+    @IBOutlet weak var temperatureLbl: UILabel!
+    @IBOutlet weak var fahrenheitLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

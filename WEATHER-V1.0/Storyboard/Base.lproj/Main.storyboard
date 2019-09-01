@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Current Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrentWeatherViewController" customModule="WEATHER_V1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drizzle" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-f1-eEe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Low-ZP-jgY">
+                                <rect key="frame" x="16" y="215.5" width="343" height="93"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-tG-fQL">
+                                <rect key="frame" x="16" y="170" width="343" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAHRENHEIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-Zb-Ozu">
+                                <rect key="frame" x="16" y="328.5" width="343" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NJg-Zb-Ozu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6XY-yS-Eog"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Low-ZP-jgY" secondAttribute="trailing" constant="16" id="FcS-4A-TNM"/>
+                            <constraint firstItem="PeE-f1-eEe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KNC-7J-3B9"/>
+                            <constraint firstItem="Low-ZP-jgY" firstAttribute="top" secondItem="f8b-tG-fQL" secondAttribute="bottom" constant="20" id="PVJ-wW-AE7"/>
+                            <constraint firstItem="f8b-tG-fQL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tdj-4G-kmk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJg-Zb-Ozu" secondAttribute="trailing" constant="16" id="U9U-E1-pze"/>
+                            <constraint firstItem="NJg-Zb-Ozu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPJ-xu-I5U"/>
+                            <constraint firstItem="PeE-f1-eEe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ir0-02-5qX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PeE-f1-eEe" secondAttribute="bottom" id="ker-9J-G3x"/>
+                            <constraint firstItem="Low-ZP-jgY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lll-rz-Deq"/>
+                            <constraint firstItem="f8b-tG-fQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mkp-Xr-yS9"/>
+                            <constraint firstItem="Low-ZP-jgY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pIP-xA-Dcf"/>
+                            <constraint firstItem="f8b-tG-fQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="suB-Lv-ket"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8b-tG-fQL" secondAttribute="trailing" constant="16" id="tLw-0g-Iec"/>
+                            <constraint firstItem="PeE-f1-eEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uq2-qj-IMT"/>
+                            <constraint firstItem="NJg-Zb-Ozu" firstAttribute="top" secondItem="Low-ZP-jgY" secondAttribute="bottom" constant="20" id="v8N-bP-nb1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImg" destination="PeE-f1-eEe" id="57d-cp-TW7"/>
+                        <outlet property="cityLbl" destination="f8b-tG-fQL" id="vQs-xP-Kf8"/>
+                        <outlet property="fahrenheitLbl" destination="NJg-Zb-Ozu" id="FnY-UD-5jl"/>
+                        <outlet property="temperatureLbl" destination="Low-ZP-jgY" id="pib-KO-TJF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="drizzle" width="600" height="600"/>
+    </resources>
+</document>
