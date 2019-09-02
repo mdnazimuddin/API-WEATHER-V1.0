@@ -20,7 +20,7 @@ class CurrentWeather{
         return value
     }
 }
-class CurrentWeatherModel{
+class CurrentWeatherCityModel{
     var name:String!
     init(name:String) {
         self.name = name
